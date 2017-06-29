@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import static com.example.boaviagem.R.id.nova_viagem;
 /*import android.widget.TextView;
 import android.widget.Toast;*/
 
@@ -19,20 +23,28 @@ public class DashboardActivity extends Activity {
         setContentView(R.layout.dashboard);
     }
 
-    /*public void selecionarOpcao(View view){
+    /*public void selecionarOpcao(View view) {
         TextView textView = (TextView) view;
-        String opcao = "Opção: "+textView.getText().toString();
+        String opcao = "Opção: " + textView.getText().toString();
         Toast.makeText(this, opcao, Toast.LENGTH_LONG).show();
-    */
+    }*/
 
-    public class ViagemActivity extends Activity {
 
-        public void selecionarOpcao(View view){
-            Switch(view.getId()){
-                case R.id.nova_viagem:
-                    startActivity(new Intent((this, viagemActivity.class)));
-                    break;
-            }
+
+    public void selecionarOpcao(View view){
+        switch(view.getId()){
+            case R.id.novo_gasto:
+                startActivity(new Intent(this, NovoGastoActivity.class));
+                break;
+            case R.id.nova_viagem:
+                startActivity(new Intent(this, ViagemActivity.class));
+                break;
+            case R.id.minhas_viagens:
+                startActivity(new Intent(this,MinhasViagensActivity.class));
+                break;
+            case R.id.configuracoes:
+                startActivity(new Intent(this,ConfiguracoesActivity.class));
+                break;
         }
     }
 }

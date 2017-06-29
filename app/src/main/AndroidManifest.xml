@@ -19,6 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".DashboardActivity"/>
+        <activity android:name=".NovoGastoActivity"/>
+        <activity android:name=".ViagemActivity"/>
+        <activity android:name=".MinhasViagensActivity"/>
+        <activity android:name=".ConfiguracoesActivity"/>
 
     </application>
 
